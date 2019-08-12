@@ -1,0 +1,143 @@
+body
+{
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    font-family: sans-serif;
+}
+
+.move
+{
+    bottom: 0;
+    position: absolute;
+}
+
+.container
+{
+    margin: auto;
+    border: 1px solid grey;
+    height: 500px;
+    width: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+
+.telemetry { margin: 10px; z-index: 1000; position: relative;}
+
+.rocket
+{
+    background: white;
+    width: 25px;
+    border: 1px solid black;
+    height: 100px;
+    position: absolute;
+    transform-origin: center;
+    bottom: 0px;
+    left: 237.5px;
+}
+
+@media screen and (max-width: 950px) { .container { height: 100%; width: 100%; } .rocket { left: calc(50vw - 12.5px)} }
+
+@media screen and (max-width: 950px)
+{.container {
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+}}
+
+.center-of-mass
+{
+    background: black;
+    width: 10px;
+    height: 10px;
+    margin-left: 7.5px;
+    margin-top: 45px;
+    border-radius: 50%;
+}
+
+.motor-angle
+{
+    background: red;
+    width: 2px;
+    height: 50px;
+    left: 11px;
+    bottom: -50px;
+    position: absolute;
+    transform-origin: top;
+}
+
+.ruler, .ruler div 
+{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.ruler div
+{
+    text-align: right;
+    width: 100vw;
+    border-bottom: 1px solid rgb(240, 240, 240);
+    padding-right: 15px;
+}
+
+.ruler div:last-child
+{
+    bottom: 50px;
+}
+
+.ruler div:nth-child(1)
+{
+    bottom: 450px;
+}
+
+.ruler div:nth-child(2)
+{
+    bottom: 350px;
+}
+
+.ruler div:nth-child(3)
+{
+    bottom: 250px;
+}
+
+.ruler div:nth-child(4)
+{
+    bottom: 150px;
+}
+
+.left, .right
+{
+    bottom: 20px;
+    position: absolute;
+}
+
+.left > div, .right > div
+{
+    background: rgb(255, 77, 77);
+    border-radius: 50%;
+    padding: 10px;
+    height: 28px;
+    width: 28px;
+    margin-bottom: 10px;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    user-select: none;
+    touch-action: manipulation;
+}
+
+.left > div:active, .right > div:active
+{
+    background: rgb(255, 23, 23);
+}
+
+.left
+{
+    left: 20px;
+}
+
+.right
+{
+    right: 70px;
+}

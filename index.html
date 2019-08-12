@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script defer src="simulation.js"></script>
+		<link href="simulation.css" type="text/css" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div class="container">
+			<div class="telemetry">
+				<span class="rad"></span><span class="deg">0, 0</span><br>
+				<span class="position"></span><br>
+				<span class="gravaccel"></span><span class="length">0, 0</span><br>
+				<span class="inputs"></span></span><br>
+				<a href="">Reload</a>
+			</div>
+			<div class="ruler">
+				<div>4 m</div>
+				<div>3 m</div>
+				<div>2 m</div>
+				<div>1 m</div>
+				<div>0 m</div>
+			</div>
+			<div class="mobile-controls">
+				<div class="left">
+					<div id="fp">F+</div>
+					<div id="ap">&alpha;+</div>
+				</div>
+				<div class="right">
+					<div id="fm">F-</div>
+					<div id="am">&alpha;-</div>
+				</div>
+			</div>
+			<div class="move">
+				<div class="rocket" style="transform: rotate(0rad);">
+					<div class="center-of-mass"></div>
+					<div class="motor-angle"></div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
